@@ -3,28 +3,27 @@
     --calculos: #FF9500;
     --dark: #1C1C1C;
     --light: #D4D4D2;
-    --fondo: #dad7d7
+    --fondo: #dad7d7;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ".SF NS", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-
+    font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
+
 body{
     background-color: var(--fondo);
 }
+
 .calculadora{
-    border: 1px white solid;
-    width: 100vh;
+    width: 100%;
     height: 100vh;
-    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-
 
 
 

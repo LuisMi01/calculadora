@@ -34,6 +34,7 @@ function App() {
         }
     };
 
+
     const deleteLast = () => {
         if (calc === '') {
             return;
@@ -58,24 +59,25 @@ function App() {
         <div className="App">
             <div className="calculadora">
                 <div className="display">
-                    <span className="result">{result && `(${result})`}</span> &nbsp;
                     <span className="operation">{calc || '0'}</span>
                 </div>
-
-
                 <div className="operadores">
                     <button onClick={() => updateCalc('+')}>+</button>
                     <button onClick={() => updateCalc('-')}>-</button>
                     <button onClick={() => updateCalc('*')}>*</button>
                     <button onClick={() => updateCalc('/')}>/</button>
-
+                </div>
+                <div className="operadores-especiales">
+                    <button>%</button>
+                    <button>+/-</button>
                     <button onClick={deleteLast}>CE</button>
                 </div>
+
 
                 <div className="numeros">
                     {crearDigitos()}
                     <button onClick={() => updateCalc('0')}>0</button>
-                    <button onClick={() => updateCalc('.')}>.</button>
+                    <button onClick={() => updateCalc('.')}>,</button>
                     <button onClick={calculate}>=</button>
                 </div>
             </div>
