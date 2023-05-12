@@ -35,12 +35,9 @@ function App() {
     };
 
 
-    const deleteLast = () => {
-        if (calc === '') {
-            return;
-        }
-        const value = calc.slice(0, -1);
-        setCalc(value);
+    const deleteAll = () => {
+        setCalc('');
+        setResult('');
     };
 
     const crearDigitos = () => {
@@ -61,25 +58,24 @@ function App() {
                 <div className="display">
                     <span className="operation">{calc || '0'}</span>
                 </div>
-                <div className="operadores">
-                    <button onClick={() => updateCalc('+')}>+</button>
-                    <button onClick={() => updateCalc('-')}>-</button>
-                    <button onClick={() => updateCalc('*')}>*</button>
-                    <button onClick={() => updateCalc('/')}>/</button>
-                </div>
                 <div className="operadores-especiales">
                     <button>%</button>
                     <button>+/-</button>
-                    <button onClick={deleteLast}>CE</button>
+                    <button id={'CE'} onClick={deleteAll}>AC</button>
                 </div>
-
-
                 <div className="numeros">
                     {crearDigitos()}
                     <button onClick={() => updateCalc('0')}>0</button>
                     <button onClick={() => updateCalc('.')}>,</button>
+                </div>
+                <div className="operadores">
+                    <button onClick={() => updateCalc('/')}>/</button>
+                    <button onClick={() => updateCalc('*')}>*</button>
+                    <button onClick={() => updateCalc('-')}>-</button>
+                    <button onClick={() => updateCalc('+')}>+</button>
                     <button onClick={calculate}>=</button>
                 </div>
+
             </div>
         </div>
     );

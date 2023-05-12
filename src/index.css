@@ -1,29 +1,120 @@
-:root{
+:root {
     --digitos: #505050;
     --calculos: #FF9500;
-    --dark: #1C1C1C;
+    --dark: black;
     --light: #D4D4D2;
-    --fondo: #dad7d7;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-body{
-    background-color: var(--fondo);
-}
-
-.calculadora{
-    width: 100%;
-    height: 100vh;
+.App {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: white;
 }
+
+.calculadora {
+    width: 355px;
+    height: 615px;
+    background-color: var(--dark);
+    border-radius: 45px;
+    padding: 2.5%;
+    padding-top: 10%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+    color: white;
+    font-family: ".SF NS", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 80px;
+    text-align: right;
+    padding: 3%;
+    font-weight: normal;
+}
+
+.operation {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+
+.operadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0 -7.5px;
+}
+
+.operadores button {
+    background-color: var(--calculos);
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 50px;
+    border-radius: 100%;
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    margin: 0 7.5px 15px 7.5px;
+    border: none;
+}
+
+.operadores button:active {
+    background-color: antiquewhite;
+}
+
+.numeros {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7.5px;
+    align-items: flex-start;
+}
+
+.numeros button {
+    background-color: var(--digitos);
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 50px;
+    border-radius: 100%;
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    margin: 0 7.5px 15px 7.5px;
+    border: none;
+}
+
+.numeros button:active {
+    background-color: antiquewhite;
+}
+
+.operadores-especiales {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.operadores-especiales button {
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 20px;
+    border-radius: 100%;
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    border: none;
+}
+
+
+
+
+
 
 
 
