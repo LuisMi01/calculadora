@@ -7,13 +7,6 @@
 <br>En este ejericio vamos a crear una calculadura usando el framework de React Native.<br> El ejercicio tiene la condicion de que cada botón y elemento, tienen que ser un componente React independiente; un elemento padre mantendrá el estado.<br> 
 <br>He basado el ejercicio en la famosa calculadora de apple que esta disponible en todos lo Iphone, en un futuro se le añadira la funcion de poner la pantalla en horizontal (apaisada) para tener todas las funciones que esta calculadora nos ofrece.<br>
 
-
-
-
-
-
-
-<br>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
