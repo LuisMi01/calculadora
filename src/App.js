@@ -65,8 +65,8 @@ function App() {
 
     return (
         <div className="App">
+            <img src={iPhoneFrame} alt="iPhone Frame" /> { <img src={iPhoneFrame} alt="iPhone Frame" />}
             <div className="calculadora">
-                <img src={iPhoneFrame} alt="iPhone Frame" /> {/* <img src={iPhoneFrame} alt="iPhone Frame" /> */}
                 <div className="display">
                     <span className="operation">{calc || '0'}</span>
                 </div>

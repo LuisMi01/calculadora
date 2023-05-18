@@ -1,31 +1,35 @@
 :root {
     --digitos: rgba(80, 80, 80, 0.76);
-    --calculos: rgba(255, 149, 0, 0.86);
+    --calculos: rgba(255, 149, 0, 0.96);
     --dark: black;
-    --light: rgba(212, 212, 210, 0.80);
+    --light: rgba(212, 212, 210, 0.90);
 }
 
 .App {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: whitesmoke;
+    height: 150vh;
+
 }
 
 .calculadora {
     width: 345px;
-    height: 660px;
+    height: 560px;
     background-color: var(--dark);
-    border-radius: 60px;
     padding: 2.5%;
     padding-top: 10%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 }
-
-
 .calculadora div {
     margin-top: auto;
+}
+.App img {
+    position: absolute;
+    width: 495px;
+    z-index: -1;
+    margin: 0;
 }
 
 .display {
