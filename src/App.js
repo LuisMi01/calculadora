@@ -6,6 +6,8 @@ import iPhoneFrame from '/Users/luismiguelurbez/Documents/GitHub/calculadora/src
 function App() {
     const [calc, setCalc] = useState('');
 
+
+
     const ops = ['/', '*', '+', '-', '.'];
     const math = create(all);
 
@@ -21,7 +23,7 @@ function App() {
             try {
 
             } catch (error) {
-                // si hay un error, simplemente no hacemos nada
+                console.log(error)
             }
         }
         setCalc(calc + value);
@@ -31,7 +33,7 @@ function App() {
         try {
             setCalc(math.evaluate(calc).toString());
         } catch (error) {
-            // si hay un error, simplemente no hacemos nada
+           console.log(error)
         }
     };
 
@@ -62,6 +64,21 @@ function App() {
         }
     };
 
+    const cambiarSigno = () => {
+        setCalc(prevCalc => {
+            if (prevCalc === '') {
+                return '';
+            }
+            const firstChar = prevCalc.charAt(0);
+            if (firstChar === '-') {
+                return prevCalc.slice(1);
+            } else {
+                return '-' + prevCalc;
+            }
+        });
+    };
+
+
 
     return (
         <div className="App">
@@ -72,11 +89,9 @@ function App() {
                 </div>
                 <div className="operadores-especiales">
                     <button id={'CE'} onClick={deleteAll}>AC</button>
-                    <button>+/-</button>
+                    <button onClick={() => cambiarSigno()}>+/-</button>
                     <button onClick={() => calculatePercentage()}>%</button>
-
                     <button id="division" onClick={() => updateCalc('/')}>/</button>
-
                 </div>
                 <div className="display-principal">
                 <div className="numeros">
@@ -91,8 +106,6 @@ function App() {
                     <button onClick={calculate}>=</button>
                 </div>
                 </div>
-
-
             </div>
         </div>
     );

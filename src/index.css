@@ -4,7 +4,9 @@
     --dark: black;
     --light: rgba(212, 212, 210, 0.90);
 }
-
+body{
+    background-color: #282c34;
+}
 .App {
     display: flex;
     justify-content: center;
@@ -140,6 +142,7 @@
 .operadores button:active {
     background-color: antiquewhite;
 }
+
 
 
 
