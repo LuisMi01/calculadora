@@ -49,7 +49,6 @@
     font-weight: normal;
 }
 
-
 .operadores-especiales {
     display: flex;
     justify-content: space-between;
@@ -87,13 +86,19 @@
 
 }
 
-.numeros{
+.numeros {
     grid-area: numeros;
     display: flex;
     flex-wrap: wrap;
-    margin-right: 10px;
     justify-content: space-between;
+    margin-right: 0;
 }
+
+.numeros button:nth-last-child(2) {
+    width: calc(100% - 85px);
+    border-radius: 35px;
+}
+
 .numeros button{
     background-color: var(--digitos);
     color: white;
