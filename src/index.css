@@ -19,8 +19,7 @@ body{
     width: 345px;
     height: 560px;
     background-color: var(--dark);
-    padding: 2.5%;
-    padding-top: 10%;
+    padding: 10% 2.5% 2.5%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 
@@ -141,14 +140,4 @@ body{
 .operadores button:active {
     background-color: antiquewhite;
 }
-
-
-
-
-
-
-
-
-
-
-
+/*Ejercicio termiando*/
