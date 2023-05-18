@@ -1,8 +1,8 @@
 :root {
-    --digitos: #505050;
-    --calculos: #FF9500;
+    --digitos: rgba(80, 80, 80, 0.76);
+    --calculos: rgba(255, 149, 0, 0.86);
     --dark: black;
-    --light: #D4D4D2;
+    --light: rgba(212, 212, 210, 0.80);
 }
 
 .App {
@@ -10,17 +10,22 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .calculadora {
-    width: 355px;
-    height: 615px;
+    width: 345px;
+    height: 660px;
     background-color: var(--dark);
     border-radius: 60px;
     padding: 2.5%;
     padding-top: 10%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.calculadora div {
+    margin-top: auto;
 }
 
 .display {
@@ -69,7 +74,7 @@
 
 .display-principal{
     display: grid;
-    grid-template-columns: 1fr 84px;
+    grid-template-columns: 1fr 82px;
     grid-template-rows: 1fr;
 
     grid-template-areas:
@@ -97,9 +102,11 @@
     transition: background-color 0.1s ease-in-out;
     border: none;
     margin-bottom: 10px;
-
-
 }
+.numeros button:active {
+    background-color: antiquewhite;
+}
+
 .operadores{
     grid-area: operadores;
     display: flex;
@@ -120,6 +127,9 @@
     border: none;
     margin-bottom: 10px;
 
+}
+.operadores button:active {
+    background-color: antiquewhite;
 }
 
 

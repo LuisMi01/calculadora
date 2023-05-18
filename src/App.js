@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { create, all } from 'mathjs';
+import iPhoneFrame from './;
+
 
 function App() {
     const [calc, setCalc] = useState('');
-    const [result, setResult] = useState('');
 
     const ops = ['/', '*', '+', '-', '.'];
     const math = create(all);
@@ -18,7 +19,7 @@ function App() {
 
         if (!ops.includes(value)) {
             try {
-                setResult(math.evaluate(calc + value).toString());
+
             } catch (error) {
                 // si hay un error, simplemente no hacemos nada
             }
@@ -37,7 +38,6 @@ function App() {
 
     const deleteAll = () => {
         setCalc('');
-        setResult('');
     };
 
     const crearDigitos = () => {
@@ -57,9 +57,8 @@ function App() {
             const parsedCalc = math.evaluate(calc);
             const percentage = parsedCalc / 100;
             setCalc(percentage.toString());
-            setResult('');
         } catch (error) {
-            // Si hay un error, simplemente no hacemos nada
+            console.log(error)
         }
     };
 
@@ -67,6 +66,7 @@ function App() {
     return (
         <div className="App">
             <div className="calculadora">
+                <img src={iPhoneFrame} alt="iPhone Frame" /> {/* <img src={iPhoneFrame} alt="iPhone Frame" /> */}
                 <div className="display">
                     <span className="operation">{calc || '0'}</span>
                 </div>
@@ -85,12 +85,13 @@ function App() {
                     <button onClick={() => updateCalc('.')}>,</button>
                 </div>
                 <div className="operadores">
-                    <button onClick={() => updateCalc('*')}>*</button>
+                    <button onClick={() => updateCalc('*')}>x</button>
                     <button onClick={() => updateCalc('-')}>-</button>
                     <button onClick={() => updateCalc('+')}>+</button>
                     <button onClick={calculate}>=</button>
                 </div>
                 </div>
+
 
             </div>
         </div>
