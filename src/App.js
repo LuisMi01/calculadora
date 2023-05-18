@@ -59,21 +59,25 @@ function App() {
                     <span className="operation">{calc || '0'}</span>
                 </div>
                 <div className="operadores-especiales">
-                    <button>%</button>
-                    <button>+/-</button>
                     <button id={'CE'} onClick={deleteAll}>AC</button>
+                    <button>+/-</button>
+                    <button>%</button>
+
+                    <button id="division" onClick={() => updateCalc('/')}>/</button>
+
                 </div>
+                <div className="display-principal">
                 <div className="numeros">
                     {crearDigitos()}
                     <button onClick={() => updateCalc('0')}>0</button>
                     <button onClick={() => updateCalc('.')}>,</button>
                 </div>
                 <div className="operadores">
-                    <button onClick={() => updateCalc('/')}>/</button>
                     <button onClick={() => updateCalc('*')}>*</button>
                     <button onClick={() => updateCalc('-')}>-</button>
                     <button onClick={() => updateCalc('+')}>+</button>
                     <button onClick={calculate}>=</button>
+                </div>
                 </div>
 
             </div>

@@ -17,7 +17,7 @@
     width: 355px;
     height: 615px;
     background-color: var(--dark);
-    border-radius: 45px;
+    border-radius: 60px;
     padding: 2.5%;
     padding-top: 10%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -40,75 +40,86 @@
     font-weight: normal;
 }
 
-.operadores {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    margin: 0 -7.5px;
-}
-
-.operadores button {
-    background-color: var(--calculos);
-    color: white;
-    font-family: 'SF Pro Display', sans-serif;
-    font-size: 50px;
-    border-radius: 100%;
-    width: 72px;
-    height: 72px;
-    cursor: pointer;
-    transition: background-color 0.1s ease-in-out;
-    margin: 0 7.5px 15px 7.5px;
-    border: none;
-}
-
-.operadores button:active {
-    background-color: antiquewhite;
-}
-
-.numeros {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -7.5px;
-    align-items: flex-start;
-}
-
-.numeros button {
-    background-color: var(--digitos);
-    color: white;
-    font-family: 'SF Pro Display', sans-serif;
-    font-size: 50px;
-    border-radius: 100%;
-    width: 72px;
-    height: 72px;
-    cursor: pointer;
-    transition: background-color 0.1s ease-in-out;
-    margin: 0 7.5px 15px 7.5px;
-    border: none;
-}
-
-.numeros button:active {
-    background-color: antiquewhite;
-}
 
 .operadores-especiales {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
+
 }
 
 .operadores-especiales button {
     background-color: var(--light);
     color: var(--dark);
     font-family: 'SF Pro Display', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 100%;
-    width: 54px;
-    height: 54px;
+    width: 75px;
+    height: 75px;
     cursor: pointer;
     transition: background-color 0.1s ease-in-out;
     border: none;
+    margin-bottom: 10px;
+
+}
+#division{
+    background-color: var(--calculos);
+    color: white;
+}
+
+.display-principal{
+    display: grid;
+    grid-template-columns: 1fr 84px;
+    grid-template-rows: 1fr;
+
+    grid-template-areas:
+    "numeros operadores"
+        ;
+
+}
+
+.numeros{
+    grid-area: numeros;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+.numeros button{
+    background-color: var(--digitos);
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 30px;
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    border: none;
+    margin-bottom: 10px;
+
+
+}
+.operadores{
+    grid-area: operadores;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+.operadores button{
+    background-color: var(--calculos);
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 30px;
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    border: none;
+    margin-bottom: 10px;
+
 }
 
 
