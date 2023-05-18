@@ -1,21 +1,36 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { create, all } from 'mathjs';
 import iPhoneFrame from '/Users/luismiguelurbez/Documents/GitHub/calculadora/src/Iphone_frame.png';
 
+alert("Bienvenido al trabajo de Luis Miguel Urbez, para usar la calculadora, simplemente pulse los botones y disfrute de la experiencia.");
 
 function App() {
     const [calc, setCalc] = useState('');
-
-
+    const [displayValue, setDisplayValue] = useState('');
+    const [displayClass, setDisplayClass] = useState('operation');
 
     const ops = ['/', '*', '+', '-', '.'];
     const math = create(all);
 
+    useEffect(() => {
+        if (calc.length > 8) {
+            setDisplayClass('operation small');
+            setDisplayValue(convertToExponential(calc));
+        } else {
+            setDisplayClass('operation');
+            setDisplayValue(calc);
+        }
+    }, [calc]);
+
+
+    const convertToExponential = (value) => {
+        const num = parseFloat(value);
+        return num.toExponential(0);
+    };
+
+
     const updateCalc = (value) => {
-        if (
-            ops.includes(value) &&
-            (calc === '' || ops.includes(calc.slice(-1)))
-        ) {
+        if (ops.includes(value) && (calc === '' || ops.includes(calc.slice(-1)))) {
             return;
         }
 
@@ -23,11 +38,12 @@ function App() {
             try {
 
             } catch (error) {
-                console.log(error)
+                console.log(error);
             }
         }
         setCalc(calc + value);
     };
+
 
     const calculate = () => {
         try {
@@ -85,7 +101,7 @@ function App() {
             <img src={iPhoneFrame} alt="iPhone Frame" /> { <img src={iPhoneFrame} alt="iPhone Frame" />}
             <div className="calculadora">
                 <div className="display">
-                    <span className="operation">{calc || '0'}</span>
+                    <span className={displayClass}>{displayValue || '0'}</span>
                 </div>
                 <div className="operadores-especiales">
                     <button id={'CE'} onClick={deleteAll}>AC</button>

@@ -23,6 +23,7 @@ body{
     padding-top: 10%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+
 }
 .calculadora div {
     margin-top: auto;
@@ -33,7 +34,6 @@ body{
     z-index: -1;
     margin: 0;
 }
-
 .display {
     color: white;
     font-family: ".SF NS", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -42,12 +42,8 @@ body{
     padding: 3%;
     font-weight: normal;
 }
-
-.operation {
+.displayClass {
     display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     font-weight: normal;
 }
 
@@ -71,6 +67,9 @@ body{
     border: none;
     margin-bottom: 10px;
 
+}
+.operadores-especiales button:active {
+    background-color: antiquewhite;
 }
 #division{
     background-color: var(--calculos);
