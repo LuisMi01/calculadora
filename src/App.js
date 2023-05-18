@@ -52,6 +52,18 @@ function App() {
         return digitos;
     };
 
+    const calculatePercentage = () => {
+        try {
+            const parsedCalc = math.evaluate(calc);
+            const percentage = parsedCalc / 100;
+            setCalc(percentage.toString());
+            setResult('');
+        } catch (error) {
+            // Si hay un error, simplemente no hacemos nada
+        }
+    };
+
+
     return (
         <div className="App">
             <div className="calculadora">
@@ -61,7 +73,7 @@ function App() {
                 <div className="operadores-especiales">
                     <button id={'CE'} onClick={deleteAll}>AC</button>
                     <button>+/-</button>
-                    <button>%</button>
+                    <button onClick={() => calculatePercentage()}>%</button>
 
                     <button id="division" onClick={() => updateCalc('/')}>/</button>
 
