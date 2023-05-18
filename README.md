@@ -1,6 +1,6 @@
 # <br>Proyecto calculadora de Luis Miguel Urbez<br>
 
-## <br>Repositorio:
+## <br>Repositorio: https://github.com/LuisMi01/calculadora/blob/main/README.md
 
 ## <br>Ejercicio a realizar:
  
@@ -14,7 +14,7 @@
 
 
 <br>
-<br># Getting Started with Create React App
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
