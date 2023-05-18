@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { create, all } from 'mathjs';
-import iPhoneFrame from './;
+import iPhoneFrame from '/Users/luismiguelurbez/Documents/GitHub/calculadora/src/Iphone_frame.png';
 
 
 function App() {
